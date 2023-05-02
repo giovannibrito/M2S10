@@ -16,6 +16,10 @@
         <p th:text="${produto.descricao}"></p>
         <p th:text="${produto.data}"></p>
         <p><strong>R$ <span th:text="${produto.preco}"></span></strong></p>
+        <div style="display: flex, padding: 5px">
+            <a th:href="@{/atualizar/} + ${produto.id}">Atualizar</a>
+            <a th:href="@{/excluir/} + ${produto.id}">Excluir</a>
+        </div>
     </div>
 </body>
 </html>

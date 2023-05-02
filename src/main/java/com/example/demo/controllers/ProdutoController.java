@@ -5,6 +5,7 @@ import com.example.demo.services.ProdutoService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -34,8 +35,22 @@ public class ProdutoController {
         return mav;
     }
 
+    @GetMapping("/atualizar/{id}")
+    public ModelAndView atualizarProduto(@PathVariable Integer id){
+        ModelAndView mav = new ModelAndView("atualizar-produto");
+        Produto produto = service.buscarPorId(id);
+        mav.addObject("produto", produto);
+        return mav;
+    }
+
+    @GetMapping("/excluir/{id}")
+    public String excluirProduto(@PathVariable Integer id){
+        service.excluirPorId(id);
+        return "redirect:/produtos";
+    }
+
     @PostMapping("/salvar-produto")
-    public String salvarProduto(@ModelAttribute Produto produto){
+    public String salvarProduto(Produto produto){
         service.cadastrar(produto);
         return "redirect:/produtos";
     }
