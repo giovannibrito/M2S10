@@ -7,8 +7,11 @@
     <title>Produto</title>
 </head>
 <body>
+    <a th:href="@{adicionar-produto}">Adicionar novo produto</a>
     <h1>Produtos</h1>
+
     <div th:each="produto: ${produtos}">
+        <hr>
         <h3 th:text="${produto.nome}"></h3>
         <p th:text="${produto.descricao}"></p>
         <p th:text="${produto.data}"></p>

@@ -1,1 +1,1 @@
-INSERT INTO PRODUTO (id, data, descricao, nome, preco) values (1, '01/03/2015', 'Ótimo violão acústico da marca Yamaha, 2 anos de uso, cordas de nylon recentemente trocadas', 'Violão Yamaha', 300.0)
+INSERT INTO PRODUTO (id, data, descricao, nome, preco) values (default, '01/03/2015', 'Ótimo violão acústico da marca Yamaha, 2 anos de uso, cordas de nylon recentemente trocadas', 'Violão Yamaha', 300.0)

@@ -1,0 +1,20 @@
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Adicionar produto</title>
+</head>
+<body>
+    <h1>Adicionar produto</h1>
+    <form th:action="@{/salvar-produto}" th:object="${produto}" method="POST">
+        <input th:field="*{nome}" type="text" placeholder="Nome do produto">
+        <input th:field="*{descricao}" type="text" placeholder="Descrição do produto">
+        <input th:field="*{data}" type="date" placeholder="Data de lançamento">
+        <input th:field="*{preco}" type="number" placeholder="Preço">
+        <button type="submit">Adicionar</button>
+    </form>
+
+</body>
+</html>
