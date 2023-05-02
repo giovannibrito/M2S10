@@ -1,0 +1,5 @@
+JWT é um padrão criado para autenticar e autorizar requisições feitas na internet. Por exemplo, quando queremos nos comunicar com uma API que exige autenticação por JWT, precisamos enviar um JWT contendo nossas credencias, e a API irá realizar a verificação do token e decidir prosseguir ou não com a nossa requisição.
+O JWT é composto por 3 partes, o cabeçalho que contem dados sobre o tipo de criptografia utilizada, o payload que contem os dados de autenticação, e uma assinatura de verificação.
+
+Um exemplo de JWT:
+https://jwt.io/#debugger-io?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6Ikdpb3Zhbm5pIEJyaXRvIiwiaWF0IjoxNTE2MjM5MDIyfQ.mQbKaLSJoiU95EgRnXFydgRCw5aEHYGavpygCINJpyg
