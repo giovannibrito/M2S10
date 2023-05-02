@@ -1,0 +1,18 @@
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Produto</title>
+</head>
+<body>
+    <h1>Produtos</h1>
+    <div th:each="produto: ${produtos}">
+        <h3 th:text="${produto.nome}"></h3>
+        <p th:text="${produto.descricao}"></p>
+        <p th:text="${produto.data}"></p>
+        <p><strong>R$ <span th:text="${produto.preco}"></span></strong></p>
+    </div>
+</body>
+</html>
